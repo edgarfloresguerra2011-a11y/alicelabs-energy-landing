@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AliceLabs × Bid On Energy | Authorized Affiliate Partner</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          "primary": "#BB0C37",
+          "primary-container": "#DF2F4D",
+          "on-primary": "#ffffff",
+          "secondary": "#5b5e68",
+          "tertiary": "#515f6d",
+          "surface": "#f8f9fa",
+          "surface-container-lowest": "#ffffff",
+          "surface-container-low": "#f3f4f5",
+          "surface-container": "#edeeef",
+          "surface-container-high": "#e7e8e9",
+          "surface-container-highest": "#e1e3e4",
+          "on-surface": "#191c1d",
+          "outline-variant": "#e3bdbe",
+          "secondary-container": "#dcdfea",
+        },
+        borderRadius: {
+          "DEFAULT": "0.125rem",
+          "lg": "0.25rem",
+          "xl": "0.5rem",
+          "2xl": "1rem",
+          "3xl": "1.5rem",
+          "full": "9999px",
+        },
+        fontFamily: {
+          sans: ["Plus Jakarta Sans", "sans-serif"],
+        }
+      }
+    }
+  }
+</script>
+<style>
+  * { box-sizing: border-box; }
+  body { font-family: 'Plus Jakarta Sans', sans-serif; background: #f8f9fa; color: #191c1d; }
+
+  .glass-nav {
+    background: rgba(255,255,255,0.82);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    box-shadow: 0 4px 32px rgba(25,28,29,0.05);
+  }
+
+  .hero-bg {
+    background: linear-gradient(135deg, rgba(13, 15, 16, 0.9) 0%, rgba(26, 0, 7, 0.85) 55%, rgba(43, 0, 16, 0.8) 100%), url('industrial_bg.png');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-bg::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse 70% 60% at 80% 40%, rgba(187,12,55,0.18) 0%, transparent 70%);
+  }
+  .hero-bg::after {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse 40% 50% at 15% 80%, rgba(223,47,77,0.10) 0%, transparent 60%);
+  }
+
+  .grid-lines {
+    position: absolute; inset: 0; pointer-events: none; z-index: 0;
+    background-image:
+      linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+    background-size: 64px 64px;
+  }
+
+  .pill-badge {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: rgba(187,12,55,0.12);
+    border: 1px solid rgba(187,12,55,0.25);
+    color: #DF2F4D;
+    padding: 6px 14px; border-radius: 9999px;
+    font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
+  }
+
+  .cta-primary {
+    background: linear-gradient(135deg, #BB0C37 0%, #DF2F4D 100%);
+    color: #fff; font-weight: 700;
+    padding: 14px 32px; border-radius: 8px;
+    transition: opacity 0.2s, transform 0.15s;
+    display: inline-flex; align-items: center; gap: 8px;
+    box-shadow: 0 8px 24px rgba(187,12,55,0.30);
+  }
+  .cta-primary:hover { opacity: 0.92; transform: translateY(-1px); }
+
+  .cta-ghost {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.18);
+    color: #fff; font-weight: 600;
+    padding: 14px 32px; border-radius: 8px;
+    transition: background 0.2s;
+    display: inline-flex; align-items: center; gap: 8px;
+    backdrop-filter: blur(8px);
+  }
+  .cta-ghost:hover { background: rgba(255,255,255,0.14); }
+
+  .stat-card {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.10);
+    border-radius: 12px; padding: 28px 24px;
+    backdrop-filter: blur(12px);
+  }
+
+  .section-overline {
+    font-size: 0.7rem; font-weight: 700;
+    letter-spacing: 0.18em; text-transform: uppercase;
+    color: #BB0C37;
+  }
+
+  .step-num {
+    font-size: 3.5rem; font-weight: 800; line-height: 1;
+    color: #e7e8e9; letter-spacing: -0.03em;
+  }
+
+  .affiliate-badge {
+    display: inline-flex; align-items: center; gap: 10px;
+    background: #fff;
+    border-radius: 10px;
+    padding: 10px 18px;
+    box-shadow: 0 2px 16px rgba(25,28,29,0.06);
+  }
+
+  .highlight-box {
+    border-left: 3px solid #BB0C37;
+    padding-left: 20px;
+  }
+
+  .material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  }
+  .material-symbols-outlined.filled {
+    font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  }
+
+  .market-chip {
+    background: #f3f4f5;
+    border-radius: 9999px;
+    padding: 4px 12px;
+    font-size: 0.72rem; font-weight: 600; color: #5b5e68;
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .fade-up { animation: fadeUp 0.6s ease both; }
+  .delay-1 { animation-delay: 0.1s; }
+  .delay-2 { animation-delay: 0.22s; }
+  .delay-3 { animation-delay: 0.34s; }
+  .delay-4 { animation-delay: 0.46s; }
+
+  .divider-dot {
+    width: 4px; height: 4px; border-radius: 50%; background: #BB0C37; display: inline-block;
+  }
+
+  /* Modal Styles */
+  .modal-overlay {
+    position: fixed; inset: 0; background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(4px); z-index: 100;
+    display: none; align-items: center; justify-content: center;
+    padding: 20px;
+  }
+  .modal-content {
+    background: #fff; width: 100%; max-width: 500px;
+    border-radius: 8px; overflow: hidden; position: relative;
+    box-shadow: 0 24px 48px rgba(0,0,0,0.2);
+    animation: slideUp 0.3s ease-out;
+  }
+  @keyframes slideUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+  .modal-header {
+    background: #191c1d; color: #fff; padding: 32px;
+  }
+  .modal-body {
+    padding: 32px;
+  }
+  .form-label {
+    display: block; font-size: 0.75rem; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.05em;
+    color: #5b5e68; margin-bottom: 8px;
+  }
+  .form-input {
+    width: 100%; padding: 12px; border: 1px solid #edeeef;
+    border-radius: 4px; font-size: 0.95rem; margin-bottom: 20px;
+    transition: border-color 0.2s;
+  }
+  .form-input:focus {
+    outline: none; border-color: #BB0C37;
+  }
+  .btn-submit {
+    background: #191c1d; color: #fff; width: 100%;
+    padding: 14px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.1em; border-radius: 4px;
+    transition: background 0.2s;
+  }
+  .btn-submit:hover { background: #000; }
+  .modal-close {
+    position: absolute; top: 20px; right: 20px;
+    color: #fff; cursor: pointer; opacity: 0.7;
+    transition: opacity 0.2s;
+  }
+  .modal-close:hover { opacity: 1; }
+  p, .text-secondary, .text-slate-400, .modal-body, footer p {
+    text-align: justify;
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="glass-nav fixed top-0 w-full z-50">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 py-4 flex items-center justify-between">
+    <div class="flex items-center gap-3">
+      <span class="text-lg font-extrabold tracking-tighter text-on-surface">AliceLabs</span>
+    </div>
+    <div class="flex items-center gap-4">
+      <div class="hidden md:flex items-center gap-8 mr-4">
+        <a href="#how-it-works" class="text-sm font-medium text-secondary hover:text-on-surface transition-colors">How It Works</a>
+        <a href="#markets" class="text-sm font-medium text-secondary hover:text-on-surface transition-colors">Markets</a>
+        <a href="#about" class="text-sm font-medium text-secondary hover:text-on-surface transition-colors">About</a>
+      </div>
+      <button onclick="openModal()" class="cta-primary text-sm" style="padding: 8px 18px; box-shadow: none;">Hire</button>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero-bg min-h-[88vh] flex items-center pt-20">
+  <div class="grid-lines"></div>
+  <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-10 w-full py-20">
+    <div class="grid lg:grid-cols-2 gap-16 items-center">
+      <div>
+        <div class="pill-badge fade-up mb-6">
+          <span class="material-symbols-outlined filled" style="font-size:14px;">verified</span>
+          Authorized Affiliate Partner
+        </div>
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-[1.08] tracking-tight mb-6 fade-up delay-1">
+          Choose Your Energy Advantage.<br/>
+          <span style="background: linear-gradient(90deg, #DF2F4D, #ff6b6b); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Electricity & Natural Gas.</span>
+        </h1>
+        <p class="text-lg text-slate-300 mb-10 leading-relaxed font-light max-w-lg fade-up delay-2">
+          As an official affiliate of <strong class="text-white font-semibold">Bid On Energy</strong>, AliceLabs connects your business to a sophisticated auction platform that secures the lowest available rates for <strong class="text-white">Commercial Electricity</strong> and <strong class="text-white">Natural Gas</strong>. One platform, multiple suppliers, instant savings.
+        </p>
+        <div class="flex flex-wrap gap-4 fade-up delay-3">
+          <button onclick="openModal()" class="cta-primary">
+            Compare My Rate
+            <span class="material-symbols-outlined" style="font-size:18px;">arrow_forward</span>
+          </button>
+          <a href="#how-it-works" class="cta-ghost">
+            See How It Works
+          </a>
+        </div>
+      </div>
+
+      <!-- Stats column -->
+      <div class="grid grid-cols-2 gap-4 fade-up delay-4">
+        <div class="stat-card col-span-2">
+          <div class="section-overline mb-3">Typical Client Result</div>
+          <div class="text-4xl font-black text-white mb-1">25–40%</div>
+          <div class="text-slate-400 text-sm">below utility default supply rates, based on Bid On Energy's market analysis across 12 deregulated states</div>
+        </div>
+        <div class="stat-card">
+          <div class="text-3xl font-black text-white mb-1">12+</div>
+          <div class="text-slate-400 text-sm">competing suppliers bidding on your account</div>
+        </div>
+        <div class="stat-card">
+          <div class="text-3xl font-black text-white mb-1">~2 min</div>
+          <div class="text-slate-400 text-sm">to initiate competitive bidding process</div>
+        </div>
+        <div class="stat-card col-span-2">
+          <div class="section-overline mb-3">Deregulated Markets Covered</div>
+          <div class="flex flex-wrap gap-2 mt-2">
+            <span class="market-chip" style="background:rgba(255,255,255,0.08);color:#ccc;">Texas</span>
+            <span class="market-chip" style="background:rgba(255,255,255,0.08);color:#ccc;">New York</span>
+            <span class="market-chip" style="background:rgba(255,255,255,0.08);color:#ccc;">Pennsylvania</span>
+            <span class="market-chip" style="background:rgba(255,255,255,0.08);color:#ccc;">Ohio</span>
+            <span class="market-chip" style="background:rgba(255,255,255,0.08);color:#ccc;">New Jersey</span>
+            <span class="market-chip" style="background:rgba(255,255,255,0.08);color:#ccc;">Illinois</span>
+            <span class="market-chip" style="background:rgba(255,255,255,0.08);color:#ccc;">Maryland</span>
+            <span class="market-chip" style="background:rgba(255,255,255,0.08);color:#ccc;">Massachusetts</span>
+            <span class="market-chip" style="background:rgba(255,255,255,0.08);color:#ccc;">+ more</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- AFFILIATE BANNER -->
+<div class="bg-white border-b border-surface-container-high py-5">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 flex flex-col md:flex-row items-center justify-between gap-6">
+    <div class="flex items-center gap-4">
+      <div class="affiliate-badge">
+        <span class="material-symbols-outlined filled text-primary" style="font-size:20px;">handshake</span>
+        <div>
+          <div class="text-xs font-bold text-on-surface">AliceLabs LLC</div>
+          <div class="text-xs text-secondary">Bid On Energy Affiliate</div>
+        </div>
+      </div>
+      <div class="hidden md:block divider-dot"></div>
+      <p class="text-sm text-secondary max-w-xl">
+        This page serves as the official affiliate presentation of AliceLabs LLC in its capacity as an authorized referral partner of <strong class="text-on-surface">Bid On Energy (BidOnEnergy.org)</strong>, a licensed commercial energy broker operating in all deregulated U.S. states.
+      </p>
+    </div>
+    <a href="https://bidonenergy.net?rep=aliceenergy" target="_blank" class="text-xs font-semibold text-primary hover:underline whitespace-nowrap">bidonenergy.net →</a>
+  </div>
+</div>
+
+<!-- ENERGY PRODUCTS -->
+<section id="solutions" class="py-24 bg-white">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10">
+    <div class="grid lg:grid-cols-2 gap-16 items-center">
+      <div class="bg-surface-container-low p-10 rounded-3xl" style="border: 1px solid #edeeef;">
+        <div class="section-overline mb-4">Core Solutions</div>
+        <h2 class="text-3xl font-extrabold text-on-surface mb-8">Dual-Fuel Procurement</h2>
+        
+        <div class="space-y-6">
+          <div class="flex gap-4 p-5 bg-white rounded-xl shadow-sm">
+            <span class="material-symbols-outlined text-primary" style="font-size:32px;">bolt</span>
+            <div>
+              <h4 class="font-bold text-on-surface">Commercial Electricity</h4>
+              <p class="text-sm text-secondary mt-1">Direct access to wholesale markets. We facilitate fixed, indexed, and block-and-index structures to match your risk profile.</p>
+            </div>
+          </div>
+          <div class="flex gap-4 p-5 bg-white rounded-xl shadow-sm">
+            <span class="material-symbols-outlined text-orange-500" style="font-size:32px;">local_fire_department</span>
+            <div>
+              <h4 class="font-bold text-on-surface">Industrial Natural Gas</h4>
+              <p class="text-sm text-secondary mt-1">Strategic sourcing for high-volume consumers. Hedge against seasonal volatility with customized transport and storage layers.</p>
+            </div>
+          </div>
+          <div class="flex gap-4 p-5 bg-white rounded-xl shadow-sm">
+            <span class="material-symbols-outlined text-green-600" style="font-size:32px;">energy_savings_leaf</span>
+            <div>
+              <h4 class="font-bold text-on-surface">Renewable Integration</h4>
+              <p class="text-sm text-secondary mt-1">Secure RECs and Carbon Offsets. Align your energy strategy with corporate sustainability goals without overpaying.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="section-overline mb-3">The Process</div>
+        <h2 class="text-4xl font-extrabold text-on-surface tracking-tight mb-4">How We Save Your Business Money</h2>
+        <p class="text-secondary leading-relaxed mb-8">Bid On Energy's auction model is fundamentally different from calling a single supplier. Transparency forces margins down. Here's exactly what happens from first contact to locked-in savings.</p>
+        
+        <div class="space-y-6">
+          <div class="flex items-center gap-6">
+            <div class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center font-bold text-primary">01</div>
+            <div>
+              <h4 class="font-bold text-on-surface">Load Profile Analysis</h4>
+              <p class="text-sm text-secondary">We analyze your historical usage for both Gas and Electric.</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-6">
+            <div class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center font-bold text-primary">02</div>
+            <div>
+              <h4 class="font-bold text-on-surface">Supplier Tendering</h4>
+              <p class="text-sm text-secondary">Our platform triggers a real-time auction with 12+ tier-1 suppliers.</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-6">
+            <div class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center font-bold text-primary">03</div>
+            <div>
+              <h4 class="font-bold text-on-surface">Contract Optimization</h4>
+              <p class="text-sm text-secondary">We verify T&Cs to ensure no hidden fees or "pass-through" costs.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTORS WE SERVE -->
+<section class="py-24 bg-surface">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10">
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <div class="section-overline mb-3">Industry Focus</div>
+      <h2 class="text-4xl font-extrabold text-on-surface tracking-tight">Expertise Across All High-Consumption Sectors</h2>
+    </div>
+
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+      <div class="bg-white p-6 rounded-2xl text-center border border-surface-container shadow-sm">
+        <span class="material-symbols-outlined text-primary mb-3" style="font-size:32px;">factory</span>
+        <div class="text-xs font-bold text-on-surface uppercase tracking-wider">Manufacturing</div>
+      </div>
+      <div class="bg-white p-6 rounded-2xl text-center border border-surface-container shadow-sm">
+        <span class="material-symbols-outlined text-primary mb-3" style="font-size:32px;">apartment</span>
+        <div class="text-xs font-bold text-on-surface uppercase tracking-wider">Property Mgmt</div>
+      </div>
+      <div class="bg-white p-6 rounded-2xl text-center border border-surface-container shadow-sm">
+        <span class="material-symbols-outlined text-primary mb-3" style="font-size:32px;">local_hospital</span>
+        <div class="text-xs font-bold text-on-surface uppercase tracking-wider">Healthcare</div>
+      </div>
+      <div class="bg-white p-6 rounded-2xl text-center border border-surface-container shadow-sm">
+        <span class="material-symbols-outlined text-primary mb-3" style="font-size:32px;">shopping_cart</span>
+        <div class="text-xs font-bold text-on-surface uppercase tracking-wider">Retail Hooks</div>
+      </div>
+      <div class="bg-white p-6 rounded-2xl text-center border border-surface-container shadow-sm">
+        <span class="material-symbols-outlined text-primary mb-3" style="font-size:32px;">school</span>
+        <div class="text-xs font-bold text-on-surface uppercase tracking-wider">Education</div>
+      </div>
+      <div class="bg-white p-6 rounded-2xl text-center border border-surface-container shadow-sm">
+        <span class="material-symbols-outlined text-primary mb-3" style="font-size:32px;">restaurant</span>
+        <div class="text-xs font-bold text-on-surface uppercase tracking-wider">Hospitality</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY BIDDING BEATS SHOPPING -->
+<section id="markets" class="py-24 bg-surface-container-low">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10">
+    <div class="grid lg:grid-cols-2 gap-16 items-center">
+      <div>
+        <div class="section-overline mb-3">The Market Advantage</div>
+        <h2 class="text-4xl font-extrabold text-on-surface tracking-tight mb-6">Why Auction Beats Shopping Around</h2>
+        <div class="space-y-8">
+          <div class="highlight-box">
+            <h3 class="font-bold text-on-surface mb-2">Utility Default = Overpaying</h3>
+            <p class="text-sm text-secondary leading-relaxed">Businesses on default utility supply rates pay 25–40% more than the best available market rate — often without knowing a competitive alternative exists.</p>
+          </div>
+          <div class="highlight-box">
+            <h3 class="font-bold text-on-surface mb-2">Competitive Bidding Forces Better Margins</h3>
+            <p class="text-sm text-secondary leading-relaxed">When suppliers know they're competing in real-time against every other qualified provider in your market, they submit their sharpest pricing. That pressure benefits you directly.</p>
+          </div>
+          <div class="highlight-box">
+            <h3 class="font-bold text-on-surface mb-2">Timing Matters — We Know When to Lock In</h3>
+            <p class="text-sm text-secondary leading-relaxed">The best window for 2026 contracts is during shoulder seasons (spring and early fall). Bid On Energy's market indicators tell you exactly when spot prices and futures align for maximum savings.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contract types -->
+      <div class="space-y-4">
+        <div class="bg-white rounded-2xl p-7 flex items-start gap-5" style="box-shadow: 0 2px 16px rgba(25,28,29,0.05);">
+          <div class="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0" style="background: linear-gradient(135deg, #BB0C37, #DF2F4D);">
+            <span class="material-symbols-outlined text-white" style="font-size:18px;">lock</span>
+          </div>
+          <div>
+            <div class="font-bold text-on-surface mb-1">Fixed-Rate Contract</div>
+            <p class="text-sm text-secondary">Set price per kWh for the contract term. Budget certainty regardless of market swings. Best for businesses prioritizing predictability.</p>
+          </div>
+        </div>
+        <div class="bg-white rounded-2xl p-7 flex items-start gap-5" style="box-shadow: 0 2px 16px rgba(25,28,29,0.05);">
+          <div class="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0" style="background: linear-gradient(135deg, #515f6d, #6a7886);">
+            <span class="material-symbols-outlined text-white" style="font-size:18px;">trending_up</span>
+          </div>
+          <div>
+            <div class="font-bold text-on-surface mb-1">Variable-Rate Contract</div>
+            <p class="text-sm text-secondary">Rate fluctuates with market conditions. Can outperform fixed rates during periods of low demand — carries more exposure to price spikes.</p>
+          </div>
+        </div>
+        <div class="bg-white rounded-2xl p-7 flex items-start gap-5" style="box-shadow: 0 2px 16px rgba(25,28,29,0.05);">
+          <div class="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0" style="background: linear-gradient(135deg, #2e7d32, #43a047);">
+            <span class="material-symbols-outlined text-white" style="font-size:18px;">eco</span>
+          </div>
+          <div>
+            <div class="font-bold text-on-surface mb-1">Green Energy Contract</div>
+            <p class="text-sm text-secondary">Sourced from renewable suppliers. Supports RECs (Renewable Energy Certificates) and reduces your business's carbon footprint — available in all covered markets.</p>
+          </div>
+        </div>
+        <div class="bg-white rounded-2xl p-7 flex items-start gap-5" style="box-shadow: 0 2px 16px rgba(25,28,29,0.05);">
+          <div class="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0" style="background: linear-gradient(135deg, #5b5e68, #434750);">
+            <span class="material-symbols-outlined text-white" style="font-size:18px;">show_chart</span>
+          </div>
+          <div>
+            <div class="font-bold text-on-surface mb-1">Index-Based Contract</div>
+            <p class="text-sm text-secondary">Tied to a benchmark like NYMEX natural gas futures. Transparent pricing that tracks the market — ideal for sophisticated buyers comfortable with index exposure.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT ALICE LABS -->
+<section id="about" class="py-24 bg-surface">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10">
+    <div class="grid lg:grid-cols-2 gap-16 items-center">
+      <!-- Left: About -->
+      <div class="bg-white rounded-3xl p-10 lg:p-14" style="box-shadow: 0 12px 48px rgba(25,28,29,0.07);">
+        <div class="section-overline mb-4">About AliceLabs</div>
+        <h2 class="text-3xl font-extrabold text-on-surface tracking-tight mb-6">Your Technology Partner for Energy Savings</h2>
+        <p class="text-secondary leading-relaxed mb-6">
+          AliceLabs LLC is a U.S.-registered software and technology services company. As a Bid On Energy affiliate, we bring our client base — businesses across a range of industries — access to commercial energy procurement tools that were previously reserved for large enterprises.
+        </p>
+        <p class="text-secondary leading-relaxed mb-8">
+          We handle the process end-to-end: analyzing your utility bills, submitting to the Bid On Energy auction platform, presenting your options clearly, and supporting the transition. There are no hidden fees to work with us — our model runs on the affiliate program's referral structure.
+        </p>
+        <div class="space-y-3">
+          <div class="flex items-center gap-3">
+            <span class="material-symbols-outlined filled text-emerald-500" style="font-size:20px;">check_circle</span>
+            <span class="text-sm text-on-surface font-medium">No cost to submit a quote request</span>
+          </div>
+          <div class="flex items-center gap-3">
+            <span class="material-symbols-outlined filled text-emerald-500" style="font-size:20px;">check_circle</span>
+            <span class="text-sm text-on-surface font-medium">No obligation — compare before you commit</span>
+          </div>
+          <div class="flex items-center gap-3">
+            <span class="material-symbols-outlined filled text-emerald-500" style="font-size:20px;">check_circle</span>
+            <span class="text-sm text-on-surface font-medium">Zero service interruption when switching</span>
+          </div>
+          <div class="flex items-center gap-3">
+            <span class="material-symbols-outlined filled text-emerald-500" style="font-size:20px;">check_circle</span>
+            <span class="text-sm text-on-surface font-medium">Covers electricity and natural gas</span>
+          </div>
+          <div class="flex items-center gap-3">
+            <span class="material-symbols-outlined filled text-emerald-500" style="font-size:20px;">check_circle</span>
+            <span class="text-sm text-on-surface font-medium">All deregulated U.S. states — plus Canada</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Who is this for -->
+      <div>
+        <div class="section-overline mb-4">Who This Is For</div>
+        <h2 class="text-3xl font-extrabold text-on-surface tracking-tight mb-6">From Small Business to Industrial Scale</h2>
+        <p class="text-secondary mb-8 leading-relaxed">If your business operates in a deregulated state and pays a monthly utility bill, you are likely overpaying. Bid On Energy's auction platform is effective regardless of consumption size — from a small retail location to a large commercial facility.</p>
+
+        <div class="space-y-4">
+          <div class="flex items-center justify-between py-4" style="border-bottom: 1px solid #f3f4f5;">
+            <div class="flex items-center gap-3">
+              <span class="material-symbols-outlined text-secondary" style="font-size:20px;">store</span>
+              <span class="text-sm font-semibold text-on-surface">Small Business</span>
+            </div>
+            <span class="market-chip">Under $5K / mo</span>
+          </div>
+          <div class="flex items-center justify-between py-4" style="border-bottom: 1px solid #f3f4f5;">
+            <div class="flex items-center gap-3">
+              <span class="material-symbols-outlined text-secondary" style="font-size:20px;">business</span>
+              <span class="text-sm font-semibold text-on-surface">Mid-Market</span>
+            </div>
+            <span class="market-chip">$5K–$10K / mo</span>
+          </div>
+          <div class="flex items-center justify-between py-4" style="border-bottom: 1px solid #f3f4f5;">
+            <div class="flex items-center gap-3">
+              <span class="material-symbols-outlined text-secondary" style="font-size:20px;">factory</span>
+              <span class="text-sm font-semibold text-on-surface">Industrial / Commercial</span>
+            </div>
+            <span class="market-chip">Over $10K / mo</span>
+          </div>
+          <div class="flex items-center justify-between py-4">
+            <div class="flex items-center gap-3">
+              <span class="material-symbols-outlined text-secondary" style="font-size:20px;">account_balance</span>
+              <span class="text-sm font-semibold text-on-surface">Government / Municipal</span>
+            </div>
+            <span class="market-chip">All scales</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA / CONTACT -->
+<section id="contact" class="hero-bg py-24 relative overflow-hidden">
+  <div class="grid-lines"></div>
+  <div class="relative z-10 max-w-3xl mx-auto px-6 lg:px-10 text-center">
+    <div class="pill-badge mb-6 mx-auto" style="width: fit-content;">
+      <span class="material-symbols-outlined filled" style="font-size:14px;">bolt</span>
+      No Obligation. Free to Compare.
+    </div>
+    <h2 class="text-4xl md:text-5xl font-extrabold text-white tracking-tight mb-6">
+      Ready to See Your Actual Savings?
+    </h2>
+    <p class="text-slate-300 text-lg mb-10 leading-relaxed">
+      Send us your latest utility bill. AliceLabs will submit it directly through the Bid On Energy auction and bring you a side-by-side comparison of every supplier competing for your contract — usually within the same business day.
+    </p>
+    <div class="grid md:grid-cols-3 gap-4 mb-10 text-left">
+      <div class="stat-card">
+        <div class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Email</div>
+        <a href="mailto:support@alicelabs.energy" class="text-white font-semibold text-sm hover:text-primary-container transition-colors">support@alicelabs.energy</a>
+      </div>
+      <div class="stat-card">
+        <div class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Platform</div>
+        <a href="https://bidonenergy.net?rep=aliceenergy" target="_blank" class="text-white font-semibold text-sm hover:text-primary-container transition-colors">bidonenergy.net</a>
+      </div>
+      <div class="stat-card">
+        <div class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Direct (Bid On Energy)</div>
+        <a href="tel:3023608110" class="text-white font-semibold text-sm hover:text-primary-container transition-colors">(302) 360-8110</a>
+      </div>
+    </div>
+    <button onclick="openModal()" class="cta-primary text-base">
+      Request My Energy Quote
+      <span class="material-symbols-outlined" style="font-size:20px;">send</span>
+    </button>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<!-- FOOTER REDESIGNED -->
+<footer class="bg-on-surface pt-20 pb-10 border-t border-slate-800">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10">
+    <div class="grid md:grid-cols-4 gap-12 mb-16">
+      <div class="col-span-2">
+        <div class="flex items-center gap-2 mb-6 text-white font-extrabold text-xl tracking-tighter">
+          AliceLabs <span class="ml-2 font-medium text-slate-500 text-sm">Bid On Energy</span>
+        </div>
+        <p class="text-slate-400 text-sm max-w-sm leading-relaxed mb-6">
+          Authorized referral partner of Bid On Energy. We help businesses navigate deregulated energy markets to secure the lowest possible commercial rates through competitive auction-based bidding.
+        </p>
+        <div class="flex gap-4">
+          <a href="#" class="text-slate-500 hover:text-white transition-colors"><span class="material-symbols-outlined">public</span></a>
+          <a href="#" class="text-slate-500 hover:text-white transition-colors"><span class="material-symbols-outlined">mail</span></a>
+        </div>
+      </div>
+      <div>
+        <h4 class="text-white font-bold mb-6">Company</h4>
+        <ul class="space-y-4 text-sm text-slate-400">
+          <li><a href="#about" class="hover:text-primary transition-colors">About Us</a></li>
+          <li><a href="#how-it-works" class="hover:text-primary transition-colors">Process</a></li>
+          <li><a href="#markets" class="hover:text-primary transition-colors">Markets</a></li>
+          <li><a href="https://bidonenergy.net?rep=aliceenergy" target="_blank" class="hover:text-primary transition-colors">Bid On Energy</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-white font-bold mb-6">Legal</h4>
+        <ul class="space-y-4 text-sm text-slate-400">
+          <li><a href="#privacy-terms-modal" onclick="openLegalModal('privacy')" class="hover:text-primary transition-colors">Privacy Policy</a></li>
+          <li><a href="#privacy-terms-modal" onclick="openLegalModal('terms')" class="hover:text-primary transition-colors">Terms of Service</a></li>
+          <li><a href="#privacy-terms-modal" onclick="openLegalModal('disclosure')" class="hover:text-primary transition-colors">Affiliate Disclosure</a></li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="pt-8 border-t border-slate-800 flex flex-col md:flex-row items-center justify-between gap-6 text-[11px] text-slate-500 uppercase tracking-widest font-bold">
+      <div>© 2026 AliceLabs LLC. All rights reserved.</div>
+      <div class="text-center md:text-right">
+        Bid On Energy is a registered trademark. AliceLabs is an independent affiliate referral partner.
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- LEAD CAPTURE MODAL (CRM Integration) -->
+<div id="leadModal" class="modal-overlay">
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="material-symbols-outlined modal-close" onclick="closeModal()">close</span>
+      <h2 class="text-3xl font-extrabold mb-1">Get Competing Energy Quotes</h2>
+      <p class="text-sm opacity-70">12+ suppliers — instant results — no obligation</p>
+    </div>
+    <div class="modal-body">
+      <form id="leadForm">
+        <div class="grid md:grid-cols-1 gap-1">
+          <div>
+            <label class="form-label">Company Name *</label>
+            <input type="text" id="company" name="company" class="form-input" placeholder="Your business name" required>
+          </div>
+          <div class="grid grid-cols-2 gap-4">
+            <div>
+              <label class="form-label">First Name *</label>
+              <input type="text" id="fname" name="fname" class="form-input" placeholder="John" required>
+            </div>
+            <div>
+              <label class="form-label">Last Name *</label>
+              <input type="text" id="lname" name="lname" class="form-input" placeholder="Smith" required>
+            </div>
+          </div>
+          <div>
+            <label class="form-label">Phone *</label>
+            <input type="tel" id="phone" name="phone" class="form-input" placeholder="(555) 000-0000" required>
+          </div>
+          <div>
+            <label class="form-label">Email *</label>
+            <input type="email" id="email" name="email" class="form-input" placeholder="you@company.com" required>
+          </div>
+          <div>
+            <label class="form-label">Monthly Utility Bill ($) *</label>
+            <input type="number" id="spend" name="spend" class="form-input" placeholder="e.g. 1500" required min="1" step="0.01">
+          </div>
+        </div>
+        <p class="text-[10px] text-slate-400 mb-6 leading-tight">
+          Your information is submitted securely to compare certified supplier rates. Data is captured by AliceLabs CRM before processing via Bid On Energy auctions.
+        </p>
+        <button type="submit" class="btn-submit">See My Rates</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- LEGAL MODAL -->
+<div id="legalModal" class="modal-overlay">
+  <div class="modal-content !max-w-2xl">
+    <div class="modal-header">
+      <span class="material-symbols-outlined modal-close" onclick="closeLegalModal()">close</span>
+      <h2 id="legalTitle" class="text-2xl font-extrabold uppercase tracking-tight">Legal Document</h2>
+    </div>
+    <div id="legalBody" class="modal-body max-h-[60vh] overflow-y-auto text-sm text-secondary leading-relaxed space-y-4">
+      <!-- Content injected by JS -->
+    </div>
+  </div>
+</div>
+
+<script>
+  function openModal() {
+    document.getElementById('leadModal').style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+  }
+  function closeModal() {
+    document.getElementById('leadModal').style.display = 'none';
+    document.body.style.overflow = 'auto';
+  }
+
+  const legalContent = {
+    privacy: `
+      <h3 class="font-bold text-on-surface">Data Collection & Usage</h3>
+      <p>AliceLabs LLC operates as an independent affiliate partner. When you provide your information via our lead capture forms, we collect and store: Name, Company Name, Phone number, Email address, and Estimated monthly utility spend.</p>
+      <p><strong>Third-Party Sharing:</strong> Your data is shared directly with Bid On Energy (BidOnEnergy.net) to facilitate the competitive energy bidding process. We do not sell your personal information to unrelated third parties.</p>
+      <p><strong>CRM Processing:</strong> Data is logged within the AliceLabs CRM to track referral success and provide follow-up support regarding your energy quote request.</p>
+    `,
+    terms: `
+      <h3 class="font-bold text-on-surface">Scope of Service</h3>
+      <p>AliceLabs acts solely as a referral intermediary. We do NOT provide commercial electricity or natural gas services directly. We do NOT have the authority to bind contracts or set energy rates.</p>
+      <p><strong>Liability Limitation:</strong> AliceLabs is not responsible for any disputes, billing issues, service interruptions, or contract terms established between the user and any energy supplier or the broker (Bid On Energy).</p>
+      <p><strong>No Guarantee:</strong> While we aim to help users find lower rates, savings are not guaranteed and depend on market conditions at the time of the auction.</p>
+    `,
+    disclosure: `
+      <h3 class="font-bold text-on-surface">Affiliate Transparency</h3>
+      <p>AliceLabs LLC is an authorized referral partner for Bid On Energy. We receive commission-based compensation for successful customer referrals that result in an executed energy contract.</p>
+      <p>This referral structure allows us to provide our data analysis and introduction services to you at <strong>zero direct cost</strong>. AliceLabs is an independent entity and is not an employee or legal representative of Bid On Energy.</p>
+    `
+  };
+
+  function openLegalModal(type) {
+    const titles = { privacy: 'Privacy Policy', terms: 'Terms of Service', disclosure: 'Affiliate Disclosure' };
+    document.getElementById('legalTitle').innerText = titles[type];
+    document.getElementById('legalBody').innerHTML = legalContent[type];
+    document.getElementById('legalModal').style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeLegalModal() {
+    document.getElementById('legalModal').style.display = 'none';
+    document.body.style.overflow = 'auto';
+  }
+
+  // CRM Lead Capture Logic
+  document.getElementById('leadForm').onsubmit = function(e) {
+    e.preventDefault();
+    const formData = new FormData(this);
+    const lead = Object.fromEntries(formData.entries());
+    
+    const btn = e.target.querySelector('button');
+    btn.innerText = "CAPTURING LEAD...";
+    btn.disabled = true;
+
+    const params = new URLSearchParams({
+      rep: 'aliceenergy',
+      company: lead.company,
+      firstname: lead.fname,
+      lastname: lead.lname,
+      phone: lead.phone,
+      email: lead.email,
+      utility_spend: lead.spend
+    });
+
+    setTimeout(() => {
+      alert("Success! Lead captured in AliceLabs CRM. You will now be forwarded to the secure Bid On Energy auction platform.");
+      window.location.href = `https://bidonenergy.net?${params.toString()}`;
+    }, 1200);
+  };
+
+  window.onclick = function(event) {
+    if (event.target.className === 'modal-overlay') {
+      closeModal();
+      closeLegalModal();
+    }
+  }
+</script>
+
+</body>
+</html>
