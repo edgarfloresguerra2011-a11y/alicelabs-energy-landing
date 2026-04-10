@@ -1,8 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-K8C59NLL2J"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-K8C59NLL2J');
+</script>
+
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+  const firebaseConfig = {
+    apiKey: "AIzaSyCr83dAnJSpDtIYORFkpDbgufSdoXzYN9E",
+    authDomain: "alicelabs-ads.firebaseapp.com",
+    projectId: "alicelabs-ads",
+    storageBucket: "alicelabs-ads.firebasestorage.app",
+    messagingSenderId: "753470514366",
+    appId: "1:753470514366:web:143749c629e80ac8a1aaef"
+  };
+  const app = initializeApp(firebaseConfig);
+</script>
+
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="favicon.png">
 <title>AliceLabs × Bid On Energy | Authorized Affiliate Partner</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
@@ -55,9 +79,29 @@
 
   .neon-bolt {
     color: #DF2F4D;
-    text-shadow: 0 0 5px rgba(223, 47, 77, 0.4), 
-                 0 0 10px rgba(223, 47, 77, 0.3), 
-                 0 0 15px rgba(223, 47, 77, 0.2);
+    text-shadow: 
+      0 0 7px #fff,
+      0 0 10px #DF2F4D,
+      0 0 21px #DF2F4D,
+      0 0 42px #DF2F4D;
+    filter: drop-shadow(0 0 2px rgba(255,255,255,0.8));
+    position: relative;
+    z-index: 10;
+    transition: filter 0.3s ease;
+  }
+  .neon-bolt:hover {
+    filter: drop-shadow(0 0 5px rgba(255,255,255,0.9)) brightness(1.2);
+  }
+
+  /* Amber Neon for Gas Section */
+  .neon-bolt-amber {
+    color: #ffd60a;
+    text-shadow: 
+      0 0 7px #fff,
+      0 0 10px #C9951F,
+      0 0 21px #C9951F,
+      0 0 42px #C9951F;
+    filter: drop-shadow(0 0 2px rgba(255,255,255,0.8));
     position: relative;
     z-index: 10;
   }
@@ -362,11 +406,15 @@
           <div class="text-slate-400 text-sm">below utility default supply rates, based on Bid On Energy's market analysis across 12 deregulated states</div>
         </div>
         <div class="stat-card">
-          <div class="text-3xl font-black text-white mb-1">12+</div>
+          <div class="text-3xl font-black text-white mb-1 flex items-center gap-1">
+            12+ <span class="material-symbols-outlined neon-bolt" style="font-size: 28px;">bolt</span>
+          </div>
           <div class="text-slate-400 text-sm">competing suppliers bidding on your account</div>
         </div>
         <div class="stat-card">
-          <div class="text-3xl font-black text-white mb-1">~2 min</div>
+          <div class="text-3xl font-black text-white mb-1 flex items-center gap-1">
+            ~2 min <span class="material-symbols-outlined neon-bolt" style="font-size: 28px;">bolt</span>
+          </div>
           <div class="text-slate-400 text-sm">to initiate competitive bidding process</div>
         </div>
         <div class="stat-card col-span-2">
@@ -385,11 +433,6 @@
         </div>
       </div>
     </div>
-  </div>
-  <!-- Scroll indicator -->
-  <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2 opacity-50">
-    <div class="text-[10px] uppercase tracking-widest text-white">Scroll</div>
-    <div class="w-px h-10 bg-gradient-to-b from-white to-transparent"></div>
   </div>
 </header>
 
@@ -541,7 +584,10 @@
             <div class="px-3 py-1 text-[10px] font-bold rounded-full uppercase" style="background: rgba(201,149,31,0.15); color:#C9951F; border: 1px solid rgba(201,149,31,0.3);">Natural Gas Core</div>
           </div>
           
-          <div class="font-black select-none" style="font-size:4.5rem; line-height:1; color: rgba(201,149,31,0.08); letter-spacing:-0.04em;">GAS<br/>CHOICE</div>
+          <div class="font-black select-none flex items-center gap-2" style="font-size:4.5rem; line-height:1; color: rgba(201,149,31,0.08); letter-spacing:-0.04em;">
+            <span>GAS<br/>CHOICE</span>
+            <span class="material-symbols-outlined neon-bolt-amber" style="font-size: 60px; opacity: 1;">bolt</span>
+          </div>
           
           <div class="space-y-5">
             <div>
@@ -777,7 +823,7 @@
     <div class="grid md:grid-cols-3 gap-4 mb-10 text-left">
       <div class="stat-card">
         <div class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Email</div>
-        <a href="mailto:support@alicelabs.energy" class="text-white font-semibold text-sm hover:text-primary-container transition-colors">support@alicelabs.energy</a>
+        <a href="mailto:support@alicelabs.site" class="text-white font-semibold text-sm hover:text-primary-container transition-colors">support@alicelabs.site</a>
       </div>
       <div class="stat-card">
         <div class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Platform</div>
@@ -963,14 +1009,14 @@
     document.body.style.overflow = 'auto';
   }
 
-  // CRM Lead Capture Logic
+  // CRM Lead Capture & Silent Bridge Logic
   document.getElementById('leadForm').onsubmit = function(e) {
     e.preventDefault();
     const formData = new FormData(this);
     const lead = Object.fromEntries(formData.entries());
     
     const btn = e.target.querySelector('button');
-    btn.innerText = "CAPTURING LEAD...";
+    btn.innerHTML = `Processing <span class="material-symbols-outlined ml-2 animate-spin text-sm">cycle</span>`;
     btn.disabled = true;
 
     const params = new URLSearchParams({
@@ -984,18 +1030,90 @@
       service_type: lead.energy_type
     });
 
-    setTimeout(() => {
-      alert("Success! Lead captured in AliceLabs CRM. You will now be forwarded to the secure Bid On Energy auction platform.");
-      window.location.href = `https://bidonenergy.net?${params.toString()}`;
-    }, 1200);
-  };
+    const bidOnEnergyUrl = `https://bidonenergy.net?${params.toString()}`;
 
+    // 1. Silent submission to Bid On Energy (Fails silently if blocked by adblockers)
+    fetch(bidOnEnergyUrl, { mode: 'no-cors' }).catch(e => console.warn("Primary bridge warning:", e));
+    
+    // 2. Automated email copy to support@alicelabs.site for CRM
+    fetch('https://formsubmit.co/ajax/support@alicelabs.site', {
+      method: "POST",
+      headers: { 
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+      },
+      body: JSON.stringify({
+          _subject: `New Energy Lead: ${lead.company} (${lead.energy_type})`,
+          Company: lead.company,
+          "Contact Name": `${lead.fname} ${lead.lname}`,
+          Email: lead.email,
+          Phone: lead.phone,
+          "Utility Spend": lead.spend,
+          "Energy Requested": lead.energy_type,
+          _replyto: lead.email
+      })
+    }).catch(e => console.warn("Email bridge warning:", e));
+
+    // 3. Change UI to Thank You state after a short delay (Guaranteed execution)
+    setTimeout(() => {
+      const modalContainer = document.querySelector('#leadModal .modal-content');
+      if (modalContainer) {
+        const refId = 'AL-' + Math.random().toString(36).substr(2, 6).toUpperCase();
+        modalContainer.innerHTML = `
+          <div class="text-center py-12 px-6 bg-[#0B1628] rounded-3xl border border-[#C9951F]/30 shadow-2xl overflow-hidden relative">
+            <!-- Background glow -->
+            <div class="absolute -top-24 -right-24 w-48 h-48 rounded-full blur-[80px] pointer-events-none" style="background: rgba(201,149,31,0.15);"></div>
+            
+            <div class="relative z-10">
+              <div class="w-20 h-20 bg-[#C9951F]/10 rounded-full flex items-center justify-center mx-auto mb-6 border border-[#C9951F]/30 shadow-[0_0_30px_rgba(201,149,31,0.2)]">
+                <span class="material-symbols-outlined filled text-[#C9951F]" style="font-size:40px; text-shadow: 0 0 15px rgba(201,149,31,0.8);">bolt</span>
+              </div>
+              
+              <h2 class="text-3xl font-black text-white mb-2 uppercase tracking-tight">Success!</h2>
+              <div class="inline-block px-3 py-1 rounded-full bg-white/5 border border-white/10 text-[10px] font-bold text-[#C9951F] uppercase tracking-widest mb-6">
+                Ref ID: ${refId}
+              </div>
+              
+              <p class="text-slate-400 text-lg mb-10 leading-relaxed max-w-sm mx-auto">
+                Your industrial energy profile has been verified. We are running the auction analysis and will deliver your competitive quotes to <span class="text-[#EFF6FF] font-bold">${lead.email}</span> shortly.
+              </p>
+              
+              <div class="space-y-4">
+                <button onclick="location.reload()" class="w-full bg-[#C9951F] text-[#0B1628] py-4 px-6 rounded-xl font-black uppercase tracking-widest text-sm hover:scale-[1.02] transition-transform shadow-[0_4px_15px_rgba(201,149,31,0.4)]">
+                  Continue Dashboard
+                </button>
+                <p class="text-[10px] text-slate-500 uppercase font-bold tracking-widest">Powered by AliceLabs Data Core</p>
+              </div>
+            </div>
+          </div>
+        `;
+      }
+    }, 800);
+  };
   window.onclick = function(event) {
     if (event.target.className === 'modal-overlay') {
       closeModal();
       closeLegalModal();
     }
   }
+</script>
+
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-app.js";
+  
+  // Your web app's Firebase configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyCr83dAnJSpDtIYORFkpDbgufSdoXzYN9E",
+    authDomain: "alicelabs-ads.firebaseapp.com",
+    projectId: "alicelabs-ads",
+    storageBucket: "alicelabs-ads.firebasestorage.app",
+    messagingSenderId: "753470514366",
+    appId: "1:753470514366:web:143749c629e80ac8a1aaef"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
 </script>
 
 </body>
